@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+
+    /* react-datepicker--light-mode */
+    .react-datepicker__header {
+      background-color: white !important;
+    }
+    .react-datepicker__time-list-item--selected,
+    .react-datepicker__day--selected,
+    .react-datepicker__day--keyboard-selected {
+      background-color: rgb(215 249 88) !important;
+      color: black !important;
+    }
+    .react-datepicker__time-list-item:hover,
+    .react-datepicker__day:hover {
+      background-color: black !important;
+      color: white !important;
+    }
+
+    .react-datepicker__time-container
+      .react-datepicker__time
+      .react-datepicker__time-box
+      ul.react-datepicker__time-list {
+      height: calc(227px + 1.7rem / 2) !important;
+    }
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    /* react-datepicker--dark-mode */
+    .react-datepicker,
+    .react-datepicker__header,
+    .react-datepicker__time {
+      background-color: #09090b !important;
+    }
+    .react-datepicker__current-month,
+    .react-datepicker-time__header,
+    .react-datepicker-year-header,
+    .react-datepicker__day,
+    .react-datepicker__time-name,
+    .react-datepicker__time-container,
+    .react-datepicker__day-name {
+      color: white !important;
+    }
+    .react-datepicker__time-list-item--selected,
+    .react-datepicker__day--selected,
+    .react-datepicker__day--keyboard-selected {
+      background-color: rgb(215 249 88) !important;
+      color: #09090b !important;
+    }
+    .react-datepicker__time-list-item:hover,
+    .react-datepicker__day:hover {
+      background-color: white !important;
+      color: #09090b !important;
+    }
+
+    .react-datepicker__time-container
+      .react-datepicker__time
+      .react-datepicker__time-box
+      ul.react-datepicker__time-list {
+      height: calc(227px + 1.7rem / 2) !important;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border scrollbar-none;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .wrapper {
+    @apply max-w-7xl lg:mx-auto p-5 md:p-5 xl:p-5 w-full;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .highlightBrush_1 {
+    background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=C6FF00);
+    margin: -2px -6px;
+    padding: 10px 20px;
+  }
+}
+
+/* TYPOGRAPHY */
+/* 64 */
+.h1-bold {
+  @apply font-bold text-[40px] leading-[48px] lg:text-[48px] lg:leading-[60px]  xl:text-[58px] xl:leading-[74px];
+}
+
+/* 40 */
+.h2-bold {
+  @apply font-bold text-[32px] leading-[40px] lg:text-[36px] lg:leading-[44px] xl:text-[40px] xl:leading-[48px];
+}
+
+.h2-medium {
+  @apply font-medium text-[32px] leading-[40px] lg:text-[36px] lg:leading-[44px] xl:text-[40px] xl:leading-[48px];
+}
+
+/* 36 */
+.h3-bold {
+  @apply font-bold text-[28px] leading-[36px] md:text-[36px] md:leading-[44px];
+}
+
+.h3-medium {
+  @apply font-medium text-[28px] leading-[36px] md:text-[36px] md:leading-[44px];
+}
+
+/* 32 */
+.h4-medium {
+  @apply font-medium text-[32px] leading-[40px];
+}
+
+.h4-bold {
+  @apply font-medium text-[18px] leading-[40px];
+}
+
+/* 28 */
+.h5-bold {
+  @apply font-bold text-[28px] leading-[36px];
+}
+
+/* 24 */
+.p-bold-24 {
+  @apply font-bold text-[24px] leading-[36px];
+}
+
+.p-medium-24 {
+  @apply font-medium text-[24px] leading-[36px];
+}
+
+.p-regular-24 {
+  @apply font-normal text-[24px] leading-[36px];
+}
+
+/* 20 */
+.p-bold-20 {
+  @apply font-bold text-[20px] leading-[30px] tracking-[2%];
+}
+
+.p-semibold-20 {
+  @apply text-[20px] font-semibold leading-[30px] tracking-[2%];
+}
+
+.p-medium-20 {
+  @apply text-[20px] font-medium leading-[30px];
+}
+
+.p-regular-20 {
+  @apply text-[20px] font-normal leading-[30px] tracking-[2%];
+}
+
+/* 18 */
+.p-semibold-18 {
+  @apply text-[18px] font-semibold leading-[28px] tracking-[2%];
+}
+
+.p-medium-18 {
+  @apply text-[18px] font-medium leading-[28px];
+}
+
+.p-regular-18 {
+  @apply text-[18px] font-normal leading-[28px] tracking-[2%];
+}
+
+/* 16 */
+.p-bold-16 {
+  @apply text-[16px] font-bold leading-[24px];
+}
+
+.p-medium-16 {
+  @apply text-[16px] font-medium leading-[24px];
+}
+
+.p-regular-16 {
+  @apply text-[16px] font-normal leading-[24px];
+}
+
+/* 14 */
+.p-semibold-14 {
+  @apply text-[14px] font-semibold leading-[20px];
+}
+
+.p-medium-14 {
+  @apply text-[14px] font-medium leading-[20px];
+}
+
+.p-regular-14 {
+  @apply text-[14px] font-normal leading-[20px];
+}
+
+/* 12 */
+.p-medium-12 {
+  @apply text-[12px] font-medium leading-[20px];
+}
